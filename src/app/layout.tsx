@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter,Lato } from "next/font/google";
 import "./globals.css";
+import ParticlesProvider from "@/context/particles-provider";
 
-const inter = Inter({ subsets: ["latin"] });
+const lato = Lato({ weight: "400", subsets:["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={lato.className}>
+        <ParticlesProvider>{children}</ParticlesProvider>
+      </body>
     </html>
   );
 }
