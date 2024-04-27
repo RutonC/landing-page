@@ -1,4 +1,3 @@
-"use client";
 import { type ISourceOptions } from "@tsparticles/engine";
 
 export const particlesOptions: ISourceOptions = {
@@ -78,12 +77,5 @@ export const particlesOptions: ISourceOptions = {
         scale: 1,
         type: "inline",
         url: ""
-      },
-      // background: {
-      //   color: "#000000",
-      //   image: "",
-      //   position: "50% 50%",
-      //   repeat: "no-repeat",
-      //   size: "cover"
-      // }
+      }
 };

@@ -1,12 +1,10 @@
 "use client"
-import { ParticlesContext } from "@/context/particles-provider";
-import 'pathseg'
 import Particles from "@tsparticles/react";
-import { useContext } from "react";
-import { particlesOptions } from "@/utils/particles-options";
+import { useParticlesContext } from "@/context/particles-provider";
+import Loading from "./loading";
 
 export default function Home() {
-  const {particlesLoaded}:any = useContext(ParticlesContext);
+  const {particlesLoaded,particlesOptions}:any = useParticlesContext();
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-black">
